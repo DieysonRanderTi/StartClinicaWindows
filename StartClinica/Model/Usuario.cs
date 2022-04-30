@@ -16,5 +16,6 @@ namespace StartClinica.Model
         [MaxLength(50)]
         public string Senha { get; set; }
         public bool EhAdministrador { get; set; }
+        public bool Logado { get; set; }
     }
 }

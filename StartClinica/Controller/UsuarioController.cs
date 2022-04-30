@@ -37,14 +37,16 @@ namespace StartClinica.Controller
         {
             return context.Usuarios.Where(x => x.Nome == name).FirstOrDefault();
         }
-        public static Usuario UsuarioPadrao()
+        public static Usuario BuscarUsuarioLogado()
         {
             return new Usuario()
             {
+                Id = 2,
                 Nome = "Administrador",
                 Login = "admin123456",
                 Senha = "123456",
-                EhAdministrador = true
+                EhAdministrador = true,
+                Logado = true
             };
         }
     }

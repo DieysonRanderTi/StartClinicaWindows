@@ -13,7 +13,6 @@ namespace StartClinica.View
             InitializeComponent();
             GerarDataGrid();
         }
-
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Close();

@@ -6,7 +6,7 @@ namespace StartClinica.Data
     public class Context : DbContext
     {
         public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Agenda> Agendas { get; set; }
+        public DbSet<Evento> Eventos { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

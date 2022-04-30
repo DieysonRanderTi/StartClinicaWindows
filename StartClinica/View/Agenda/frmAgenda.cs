@@ -13,7 +13,6 @@ namespace StartClinica.View
             InitializeComponent();
             GerarDataGrid();
         }
-
         private void frmAgenda_Load(object sender, EventArgs e)
         {
             lblDataHoje.Text = DateTime.Now.ToString("dd/MM/yyyy");
@@ -28,22 +27,22 @@ namespace StartClinica.View
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            CadastrarEventoAgenda();
+            CadastrarEventoEvento();
         }
-        private void CadastrarEventoAgenda()
+        private void CadastrarEventoEvento()
         {
             try
             {
-                Agenda agenda = new Agenda()
+                Evento Evento = new Evento()
                 {
-                    Cliente = ClienteController.GetClienteByName(cmbClientes.Text),
-                    Usuario = UsuarioController.GetUsuario(1),
+                    ClienteId = ClienteController.GetClienteByName(cmbClientes.Text).Id,
+                    UsuarioId = UsuarioController.GetUsuario(1).Id,
                     Data = dtpData.Value,
-                    DataAgendamento = DateTime.Now,
+                    DataEvento = DateTime.Now,
                     Horario = cmbHorario.Text,
                     Motivo = txtDescricao.Text,
                 };
-                AgendaController.InsertAgenda(agenda);
+                EventoController.InsertEvento(Evento);
                 BuscarEventos();
                 Mensagens.CadastroSucesso();
                 LimparDados();
@@ -52,7 +51,6 @@ namespace StartClinica.View
             {
                 Mensagens.ErroParametros(ex.Message, "Erro");
             }
-            
         }
         private void LimparDados()
         {
@@ -64,13 +62,13 @@ namespace StartClinica.View
         }
         private void BuscarEventos()
         {
-            var eventos = AgendaController.GetAgendas();
+            dataGridViewAgenda.Rows.Clear();
+            var eventos = EventoController.GetAllEventos();
 
             foreach (var evento in eventos)
             {
                 dataGridViewAgenda.Rows.Add(evento.Cliente.Nome, evento.Data.ToString("dd/MM/yyyy"), evento.Horario, evento.Motivo);
-            }
-               
+            }    
         }
         private void GerarDataGrid()
         {
