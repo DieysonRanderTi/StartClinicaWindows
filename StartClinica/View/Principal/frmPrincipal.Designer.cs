@@ -29,149 +29,350 @@ namespace StartClinica
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gESTÃOFINANCEIRAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGridViewAgenda = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.rdbEventosDia = new System.Windows.Forms.RadioButton();
-            this.rdbTodosEventos = new System.Windows.Forms.RadioButton();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAgenda)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
+            this.tabMenuPrincipal = new MaterialSkin.Controls.MaterialTabControl();
+            this.tabHome = new System.Windows.Forms.TabPage();
+            this.dataGridViewEventosHome = new System.Windows.Forms.DataGridView();
+            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            this.rbEventosDeHoje = new MaterialSkin.Controls.MaterialRadioButton();
+            this.rbTodoEventos = new MaterialSkin.Controls.MaterialRadioButton();
+            this.tabClientes = new System.Windows.Forms.TabPage();
+            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.btnCadastrarCliente = new MaterialSkin.Controls.MaterialButton();
+            this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.dataGridViewListaClientes = new System.Windows.Forms.DataGridView();
+            this.tabEventos = new System.Windows.Forms.TabPage();
+            this.tabFinanceiro = new System.Windows.Forms.TabPage();
+            this.tabConfiguracoes = new System.Windows.Forms.TabPage();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.tabMenuPrincipal.SuspendLayout();
+            this.tabHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEventosHome)).BeginInit();
+            this.materialCard1.SuspendLayout();
+            this.tabClientes.SuspendLayout();
+            this.materialCard2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // tabMenuPrincipal
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.menuStrip1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroToolStripMenuItem,
-            this.gESTÃOFINANCEIRAToolStripMenuItem,
-            this.agendaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1181, 54);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.tabMenuPrincipal.Controls.Add(this.tabHome);
+            this.tabMenuPrincipal.Controls.Add(this.tabClientes);
+            this.tabMenuPrincipal.Controls.Add(this.tabEventos);
+            this.tabMenuPrincipal.Controls.Add(this.tabFinanceiro);
+            this.tabMenuPrincipal.Controls.Add(this.tabConfiguracoes);
+            this.tabMenuPrincipal.Depth = 0;
+            this.tabMenuPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabMenuPrincipal.ImageList = this.imageList1;
+            this.tabMenuPrincipal.Location = new System.Drawing.Point(3, 64);
+            this.tabMenuPrincipal.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabMenuPrincipal.Multiline = true;
+            this.tabMenuPrincipal.Name = "tabMenuPrincipal";
+            this.tabMenuPrincipal.SelectedIndex = 0;
+            this.tabMenuPrincipal.Size = new System.Drawing.Size(1175, 463);
+            this.tabMenuPrincipal.TabIndex = 5;
+            this.tabMenuPrincipal.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabMenuPrincipal_Selecting);
             // 
-            // cadastroToolStripMenuItem
+            // tabHome
             // 
-            this.cadastroToolStripMenuItem.AutoSize = false;
-            this.cadastroToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem});
-            this.cadastroToolStripMenuItem.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cadastroToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cadastroToolStripMenuItem.Image")));
-            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(100, 50);
-            this.cadastroToolStripMenuItem.Text = "Cadastros";
-            this.cadastroToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tabHome.BackColor = System.Drawing.Color.White;
+            this.tabHome.Controls.Add(this.dataGridViewEventosHome);
+            this.tabHome.Controls.Add(this.materialCard1);
+            this.tabHome.ImageKey = "casa.png";
+            this.tabHome.Location = new System.Drawing.Point(4, 39);
+            this.tabHome.Name = "tabHome";
+            this.tabHome.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHome.Size = new System.Drawing.Size(1167, 420);
+            this.tabHome.TabIndex = 0;
+            this.tabHome.Text = "Home";
             // 
-            // clientesToolStripMenuItem
+            // dataGridViewEventosHome
             // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
-            // 
-            // gESTÃOFINANCEIRAToolStripMenuItem
-            // 
-            this.gESTÃOFINANCEIRAToolStripMenuItem.BackColor = System.Drawing.SystemColors.Menu;
-            this.gESTÃOFINANCEIRAToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gESTÃOFINANCEIRAToolStripMenuItem.Image")));
-            this.gESTÃOFINANCEIRAToolStripMenuItem.Name = "gESTÃOFINANCEIRAToolStripMenuItem";
-            this.gESTÃOFINANCEIRAToolStripMenuItem.Size = new System.Drawing.Size(99, 50);
-            this.gESTÃOFINANCEIRAToolStripMenuItem.Text = "Financeiro";
-            // 
-            // agendaToolStripMenuItem
-            // 
-            this.agendaToolStripMenuItem.AutoSize = false;
-            this.agendaToolStripMenuItem.BackColor = System.Drawing.SystemColors.Menu;
-            this.agendaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("agendaToolStripMenuItem.Image")));
-            this.agendaToolStripMenuItem.Name = "agendaToolStripMenuItem";
-            this.agendaToolStripMenuItem.Size = new System.Drawing.Size(99, 50);
-            this.agendaToolStripMenuItem.Text = "Agenda";
-            this.agendaToolStripMenuItem.Click += new System.EventHandler(this.agendaToolStripMenuItem_Click);
-            // 
-            // dataGridViewAgenda
-            // 
-            this.dataGridViewAgenda.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.dataGridViewAgenda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewEventosHome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAgenda.Location = new System.Drawing.Point(572, 176);
-            this.dataGridViewAgenda.Name = "dataGridViewAgenda";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dataGridViewAgenda.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewAgenda.RowTemplate.Height = 25;
-            this.dataGridViewAgenda.Size = new System.Drawing.Size(597, 342);
-            this.dataGridViewAgenda.TabIndex = 2;
+            this.dataGridViewEventosHome.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewEventosHome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewEventosHome.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewEventosHome.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEventosHome.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewEventosHome.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewEventosHome.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewEventosHome.EnableHeadersVisualStyles = false;
+            this.dataGridViewEventosHome.Location = new System.Drawing.Point(560, 117);
+            this.dataGridViewEventosHome.Name = "dataGridViewEventosHome";
+            this.dataGridViewEventosHome.RowHeadersVisible = false;
+            this.dataGridViewEventosHome.RowTemplate.Height = 25;
+            this.dataGridViewEventosHome.Size = new System.Drawing.Size(600, 297);
+            this.dataGridViewEventosHome.TabIndex = 2;
             // 
-            // groupBox1
+            // materialCard1
             // 
-            this.groupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.materialCard1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.rdbEventosDia);
-            this.groupBox1.Controls.Add(this.rdbTodosEventos);
-            this.groupBox1.Location = new System.Drawing.Point(572, 57);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(597, 113);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
+            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.materialLabel1);
+            this.materialCard1.Controls.Add(this.materialTextBox1);
+            this.materialCard1.Controls.Add(this.rbEventosDeHoje);
+            this.materialCard1.Controls.Add(this.rbTodoEventos);
+            this.materialCard1.Depth = 0;
+            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard1.Location = new System.Drawing.Point(560, 6);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard1.Size = new System.Drawing.Size(601, 93);
+            this.materialCard1.TabIndex = 1;
             // 
-            // label1
+            // materialLabel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(7, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "FILTRO/PESQUISA";
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(209, 14);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(71, 19);
+            this.materialLabel1.TabIndex = 3;
+            this.materialLabel1.Text = "Pesquisar";
             // 
-            // textBox1
+            // materialTextBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.materialTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(7, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(584, 23);
-            this.textBox1.TabIndex = 2;
+            this.materialTextBox1.AnimateReadOnly = false;
+            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox1.Depth = 0;
+            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox1.LeadingIcon = null;
+            this.materialTextBox1.Location = new System.Drawing.Point(208, 33);
+            this.materialTextBox1.MaxLength = 50;
+            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox1.Multiline = false;
+            this.materialTextBox1.Name = "materialTextBox1";
+            this.materialTextBox1.Size = new System.Drawing.Size(392, 50);
+            this.materialTextBox1.TabIndex = 2;
+            this.materialTextBox1.Text = "";
+            this.materialTextBox1.TrailingIcon = null;
             // 
-            // rdbEventosDia
+            // rbEventosDeHoje
             // 
-            this.rdbEventosDia.AutoSize = true;
-            this.rdbEventosDia.Checked = true;
-            this.rdbEventosDia.Location = new System.Drawing.Point(6, 88);
-            this.rdbEventosDia.Name = "rdbEventosDia";
-            this.rdbEventosDia.Size = new System.Drawing.Size(64, 19);
-            this.rdbEventosDia.TabIndex = 1;
-            this.rdbEventosDia.TabStop = true;
-            this.rdbEventosDia.Text = "DO DIA";
-            this.rdbEventosDia.UseVisualStyleBackColor = true;
-            this.rdbEventosDia.CheckedChanged += new System.EventHandler(this.rdbEventosDia_CheckedChanged);
+            this.rbEventosDeHoje.AutoSize = true;
+            this.rbEventosDeHoje.Depth = 0;
+            this.rbEventosDeHoje.Location = new System.Drawing.Point(81, 25);
+            this.rbEventosDeHoje.Margin = new System.Windows.Forms.Padding(0);
+            this.rbEventosDeHoje.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rbEventosDeHoje.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rbEventosDeHoje.Name = "rbEventosDeHoje";
+            this.rbEventosDeHoje.Ripple = true;
+            this.rbEventosDeHoje.Size = new System.Drawing.Size(90, 37);
+            this.rbEventosDeHoje.TabIndex = 1;
+            this.rbEventosDeHoje.TabStop = true;
+            this.rbEventosDeHoje.Text = "De Hoje";
+            this.rbEventosDeHoje.UseVisualStyleBackColor = true;
+            this.rbEventosDeHoje.CheckedChanged += new System.EventHandler(this.rbEventosDeHoje_CheckedChanged);
             // 
-            // rdbTodosEventos
+            // rbTodoEventos
             // 
-            this.rdbTodosEventos.AutoSize = true;
-            this.rdbTodosEventos.Location = new System.Drawing.Point(76, 88);
-            this.rdbTodosEventos.Name = "rdbTodosEventos";
-            this.rdbTodosEventos.Size = new System.Drawing.Size(62, 19);
-            this.rdbTodosEventos.TabIndex = 0;
-            this.rdbTodosEventos.TabStop = true;
-            this.rdbTodosEventos.Text = "TODOS";
-            this.rdbTodosEventos.UseVisualStyleBackColor = true;
-            this.rdbTodosEventos.CheckedChanged += new System.EventHandler(this.rdbTodosEventos_CheckedChanged);
+            this.rbTodoEventos.AutoSize = true;
+            this.rbTodoEventos.Checked = true;
+            this.rbTodoEventos.Depth = 0;
+            this.rbTodoEventos.Location = new System.Drawing.Point(1, 25);
+            this.rbTodoEventos.Margin = new System.Windows.Forms.Padding(0);
+            this.rbTodoEventos.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rbTodoEventos.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rbTodoEventos.Name = "rbTodoEventos";
+            this.rbTodoEventos.Ripple = true;
+            this.rbTodoEventos.Size = new System.Drawing.Size(80, 37);
+            this.rbTodoEventos.TabIndex = 0;
+            this.rbTodoEventos.TabStop = true;
+            this.rbTodoEventos.Text = "Todos";
+            this.rbTodoEventos.UseVisualStyleBackColor = true;
+            this.rbTodoEventos.CheckedChanged += new System.EventHandler(this.rbTodoEventos_CheckedChanged);
+            // 
+            // tabClientes
+            // 
+            this.tabClientes.BackColor = System.Drawing.Color.White;
+            this.tabClientes.Controls.Add(this.materialCard2);
+            this.tabClientes.Controls.Add(this.dataGridViewListaClientes);
+            this.tabClientes.ImageKey = "add-user.png";
+            this.tabClientes.Location = new System.Drawing.Point(4, 39);
+            this.tabClientes.Name = "tabClientes";
+            this.tabClientes.Padding = new System.Windows.Forms.Padding(3);
+            this.tabClientes.Size = new System.Drawing.Size(1167, 420);
+            this.tabClientes.TabIndex = 1;
+            this.tabClientes.Text = "Clientes";
+            // 
+            // materialCard2
+            // 
+            this.materialCard2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.btnCadastrarCliente);
+            this.materialCard2.Controls.Add(this.materialTextBox2);
+            this.materialCard2.Controls.Add(this.materialLabel2);
+            this.materialCard2.Depth = 0;
+            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard2.Location = new System.Drawing.Point(10, 14);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard2.Name = "materialCard2";
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Size = new System.Drawing.Size(1147, 73);
+            this.materialCard2.TabIndex = 9;
+            // 
+            // btnCadastrarCliente
+            // 
+            this.btnCadastrarCliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCadastrarCliente.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnCadastrarCliente.Depth = 0;
+            this.btnCadastrarCliente.HighEmphasis = true;
+            this.btnCadastrarCliente.Icon = null;
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(971, 18);
+            this.btnCadastrarCliente.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCadastrarCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCadastrarCliente.Name = "btnCadastrarCliente";
+            this.btnCadastrarCliente.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnCadastrarCliente.Size = new System.Drawing.Size(162, 36);
+            this.btnCadastrarCliente.TabIndex = 2;
+            this.btnCadastrarCliente.Text = "Cadastrar Novo +";
+            this.btnCadastrarCliente.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnCadastrarCliente.UseAccentColor = false;
+            this.btnCadastrarCliente.UseVisualStyleBackColor = true;
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click);
+            // 
+            // materialTextBox2
+            // 
+            this.materialTextBox2.AnimateReadOnly = false;
+            this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialTextBox2.Depth = 0;
+            this.materialTextBox2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox2.LeadingIcon = null;
+            this.materialTextBox2.Location = new System.Drawing.Point(94, 8);
+            this.materialTextBox2.MaxLength = 50;
+            this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialTextBox2.Multiline = false;
+            this.materialTextBox2.Name = "materialTextBox2";
+            this.materialTextBox2.Size = new System.Drawing.Size(498, 50);
+            this.materialTextBox2.TabIndex = 1;
+            this.materialTextBox2.Text = "";
+            this.materialTextBox2.TrailingIcon = null;
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(17, 28);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(71, 19);
+            this.materialLabel2.TabIndex = 0;
+            this.materialLabel2.Text = "Pesquisar";
+            // 
+            // dataGridViewListaClientes
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dataGridViewListaClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewListaClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewListaClientes.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewListaClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewListaClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewListaClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewListaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewListaClientes.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewListaClientes.Location = new System.Drawing.Point(10, 94);
+            this.dataGridViewListaClientes.Name = "dataGridViewListaClientes";
+            this.dataGridViewListaClientes.RowHeadersVisible = false;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dataGridViewListaClientes.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewListaClientes.RowTemplate.Height = 25;
+            this.dataGridViewListaClientes.ShowEditingIcon = false;
+            this.dataGridViewListaClientes.Size = new System.Drawing.Size(1147, 320);
+            this.dataGridViewListaClientes.TabIndex = 8;
+            // 
+            // tabEventos
+            // 
+            this.tabEventos.BackColor = System.Drawing.Color.White;
+            this.tabEventos.ImageKey = "add.png";
+            this.tabEventos.Location = new System.Drawing.Point(4, 39);
+            this.tabEventos.Name = "tabEventos";
+            this.tabEventos.Size = new System.Drawing.Size(1167, 420);
+            this.tabEventos.TabIndex = 2;
+            this.tabEventos.Text = "Eventos";
+            // 
+            // tabFinanceiro
+            // 
+            this.tabFinanceiro.BackColor = System.Drawing.Color.White;
+            this.tabFinanceiro.ImageKey = "cash-payment.png";
+            this.tabFinanceiro.Location = new System.Drawing.Point(4, 39);
+            this.tabFinanceiro.Name = "tabFinanceiro";
+            this.tabFinanceiro.Size = new System.Drawing.Size(1167, 420);
+            this.tabFinanceiro.TabIndex = 3;
+            this.tabFinanceiro.Text = "Financeiro";
+            // 
+            // tabConfiguracoes
+            // 
+            this.tabConfiguracoes.BackColor = System.Drawing.Color.White;
+            this.tabConfiguracoes.ImageKey = "engrenagens-de-configuracoes.png";
+            this.tabConfiguracoes.Location = new System.Drawing.Point(4, 39);
+            this.tabConfiguracoes.Name = "tabConfiguracoes";
+            this.tabConfiguracoes.Size = new System.Drawing.Size(1167, 420);
+            this.tabConfiguracoes.TabIndex = 4;
+            this.tabConfiguracoes.Text = "Configurações";
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Button-Check-icon.png");
+            this.imageList1.Images.SetKeyName(1, "Button-Close-icon (1).png");
+            this.imageList1.Images.SetKeyName(2, "Button-Reload-icon.png");
+            this.imageList1.Images.SetKeyName(3, "Button-White-Add-icon.png");
+            this.imageList1.Images.SetKeyName(4, "Button-White-Remove-icon.png");
+            this.imageList1.Images.SetKeyName(5, "error-button-icon.png");
+            this.imageList1.Images.SetKeyName(6, "search-button-green-icon.png");
+            this.imageList1.Images.SetKeyName(7, "add.png");
+            this.imageList1.Images.SetKeyName(8, "add-user.png");
+            this.imageList1.Images.SetKeyName(9, "casa.png");
+            this.imageList1.Images.SetKeyName(10, "cash-payment.png");
+            this.imageList1.Images.SetKeyName(11, "engrenagens-de-configuracoes.png");
+            this.imageList1.Images.SetKeyName(12, "user.png");
             // 
             // frmPrincipal
             // 
@@ -179,11 +380,10 @@ namespace StartClinica
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1181, 530);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridViewAgenda);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.tabMenuPrincipal);
+            this.DrawerShowIconsWhenHidden = true;
+            this.DrawerTabControl = this.tabMenuPrincipal;
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrincipal";
@@ -191,29 +391,39 @@ namespace StartClinica
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAgenda)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.tabMenuPrincipal.ResumeLayout(false);
+            this.tabHome.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEventosHome)).EndInit();
+            this.materialCard1.ResumeLayout(false);
+            this.materialCard1.PerformLayout();
+            this.tabClientes.ResumeLayout(false);
+            this.materialCard2.ResumeLayout(false);
+            this.materialCard2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaClientes)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gESTÃOFINANCEIRAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agendaToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridViewAgenda;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rdbEventosDia;
-        private System.Windows.Forms.RadioButton rdbTodosEventos;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TabPage tabHome;
+        private System.Windows.Forms.TabPage tabClientes;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.TabPage tabEventos;
+        private System.Windows.Forms.TabPage tabFinanceiro;
+        private System.Windows.Forms.TabPage tabConfiguracoes;
+        private MaterialSkin.Controls.MaterialCard materialCard1;
+        private MaterialSkin.Controls.MaterialRadioButton rbEventosDeHoje;
+        private MaterialSkin.Controls.MaterialRadioButton rbTodoEventos;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private System.Windows.Forms.DataGridView dataGridViewEventosHome;
+        private System.Windows.Forms.DataGridView dataGridViewListaClientes;
+        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
+        private MaterialSkin.Controls.MaterialButton btnCadastrarCliente;
+        private MaterialSkin.Controls.MaterialTabControl tabMenuPrincipal;
     }
 }
 

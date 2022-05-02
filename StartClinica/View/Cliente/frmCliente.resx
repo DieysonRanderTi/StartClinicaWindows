@@ -58,30 +58,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnBuscaCep.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABENJREFUWEft
-        ln9MlHUcx88OjoPjfnXEuhC0gLvEYzK3appW1PzDbGZl1CrdrNVWs19/5axsLpuLApa0SdpgtFJP1Gmx
-        QnRh3lnAEhDnBRHHr+MuzvRGqHQEvvt8Hp+7nufu2B6D//Kzvfbd8/18Pu/P+/t9nhuobsSNiI0nDxo0
-        xDbCR2CWYC3W1Ihjpg8q2l7V/hK8oydwMXwWF2YIa7AWa7K2OGb6oKJgc/B91PsfRN1QIeGYIYWCFmuy
-        tjhm+qCiWRwe4ZoJ1hbHTB9cdGS4GM5Bx6zCmooNHPY9gL0DC+NwDhahI1RB7/YcOP6augj/uAuNgacT
-        1kthTcUGDvrux5cDBTIO+YoRmugWBsfGVUyiPVQe1yOFNRUb2D94H2r7Fsj4/crPwrDw35dw5PTbKK1f
-        gvLvitHkqcTU1Ukh9/3IK3F9EVhTsYF9A8tR7b0zSkPgeWEAR/XJ51DRnIddXXZUeewoPZmLb9q3Crng
-        FY+sTwprKjawp38ZPu+1R2kJVAoDBv44jR1tebIc8/FPNlwOh4SaGu+iuDzDmooNfNF/L6p6bVFafdWC
-        +LlAg2w/ws7fbAj+2SvU1HqXJqxhTcUGqvuW4tOe/ChHe7YJ4qPjARpWIMsxNX3LhO9gYnIcO+i1xOYZ
-        1lRs4LNe+sC6c/+lZQkmpyYEE2dCe1HRbYvmKnsK0T/mEnLNXifKuiR9ElhTsYFPfr0bH3jmR9naMQ9f
-        nykVhnD4xzvhPl+J5gu7EQoPirtA2amVsj4prKnYwHbPYmzunCtj41ErvmrdgjBdc2xEfob+y7/QsEVx
-        vQxrKjaw+WwRNrZZ49jQkIkX9zmw0/0mGrtqcaCjDB8eX4+X6xbj/NiQYGKYfoqbOh1xvayp2MCrbQux
-        riUjIc+6M7D225ux5oAZjx02o6TRgmdcFqx3OjAimvCOdcT1saZiAxta7VjjNl0Xq5tMKNmzAP7Rfoxc
-        GsLjpyyyPGsqNvDUj/lYcUJ/3Tx0TI97qtKwfLcFK5rkOdZUbGBdix2PuIxY5TL8Jx7+Qf7MWqyp1EDw
-        3c678EZ7Dl5ru43enXVGsAZrsSZri2NkMYe4SafTqfV6veYJp+GjTe4C1PSsoj8gJTg09ALqfa+jYfgt
-        NPrfwTH/FhwPvJcQznEN13IP97IGa7EmaZcbjcbk9PR0Nc8UZvMDDU+hVU9YshzpOY/WGHatrTME+cpm
-        A9Zizewi/Vw6pJnQ0Sz+D1mtSk1NTTIYDFoyYaDELUQWPc+j9XbiDiKXyBPJl2CLQZrjWu5jWGM+kUO6
-        Vj4kH1Y8NN+Eag5di1qr1SazESrUEUaCnWZQUSatt9JqpZXN8SmyiRwJ/JxNNZzLEmu5J5PqMwgzwUFz
-        dSl8aLPZfO0VxITwPVChOi0tLclkMrEpDQlpuJH2UsislvYSQnm+ST5ZChnQ0F4yDUqiPTVpRQbGDf0/
-        h0r1DyVRxBf1/txaAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="pctFotoCliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAKiNJREFUeF7t
