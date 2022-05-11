@@ -8,6 +8,7 @@ namespace StartClinica.Data
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Evento> Eventos { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Horario> MyProperty { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

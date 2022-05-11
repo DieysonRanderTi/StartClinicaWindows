@@ -72,7 +72,6 @@ namespace StartClinica.View
         {
             txtNome.Focus();
         }
-
         private void btnSalvarCliente_Click(object sender, EventArgs e)
         {
             InserirCliente();

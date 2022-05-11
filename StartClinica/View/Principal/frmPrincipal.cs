@@ -1,9 +1,11 @@
 ﻿using MaterialSkin.Controls;
 using StartClinica.Controller;
+using StartClinica.Mensagem;
 using StartClinica.Model;
 using StartClinica.View;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -11,6 +13,8 @@ namespace StartClinica
 {
     public partial class frmPrincipal : MaterialForm
     {
+        int month, year;
+
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
         public frmPrincipal()
         {
@@ -24,6 +28,88 @@ namespace StartClinica
                 MaterialSkin.Primary.Indigo100, MaterialSkin.Accent.Orange200, MaterialSkin.TextShade.WHITE);
 
         }
+
+        #region Calendário
+        public void MostrarDiasMes()
+        {
+            painelCalendario.Controls.Clear();
+            DateTime hoje = DateTime.Now;
+            month = hoje.Month;
+            year = hoje.Year;
+
+            string nomeMes = DateTimeFormatInfo.CurrentInfo.GetMonthName(month).ToUpper();
+            lblMesAno.Text = nomeMes +" "+ year;
+
+            DateTime primeiroDiaMes = new DateTime(year, month, 1);
+            int dias = DateTime.DaysInMonth(hoje.Year, hoje.Month);
+            int diaDaSemana = Convert.ToInt32(primeiroDiaMes.DayOfWeek.ToString("d")) + 1;
+
+            for (int i = 1; i < diaDaSemana; i++)
+            {
+                UserControlCalendario calendario = new UserControlCalendario();
+                painelCalendario.Controls.Add(calendario);
+            }
+            for (int i = 1; i <= dias; i++)
+            {
+                UserControlDias numdias = new UserControlDias();
+                numdias.Dias(i);
+                painelCalendario.Controls.Add(numdias);
+            }
+        }
+        private void btnAvancarMes_Click(object sender, EventArgs e)
+        {
+            painelCalendario.Controls.Clear();
+            month++;
+
+            string nomeMes = DateTimeFormatInfo.CurrentInfo.GetMonthName(month).ToUpper();
+            lblMesAno.Text = nomeMes + " " + year;
+
+            DateTime hoje = DateTime.Now;
+
+            DateTime primeiroDiaMes = new DateTime(year, month, 1);
+            int dias = DateTime.DaysInMonth(year, month);
+            int diaDaSemana = Convert.ToInt32(primeiroDiaMes.DayOfWeek.ToString("d")) + 1;
+
+            for (int i = 1; i < diaDaSemana; i++)
+            {
+                UserControlCalendario calendario = new UserControlCalendario();
+                painelCalendario.Controls.Add(calendario);
+            }
+            for (int i = 1; i <= dias; i++)
+            {
+                UserControlDias numdias = new UserControlDias();
+                numdias.Dias(i);
+                painelCalendario.Controls.Add(numdias);
+            }
+        }
+
+        private void btnVoltarMes_Click(object sender, EventArgs e)
+        {
+            painelCalendario.Controls.Clear();
+            month--;
+
+            string nomeMes = DateTimeFormatInfo.CurrentInfo.GetMonthName(month).ToUpper();
+            lblMesAno.Text = nomeMes + " " + year;
+
+            DateTime hoje = DateTime.Now;
+
+            DateTime primeiroDiaMes = new DateTime(year, month, 1);
+            int dias = DateTime.DaysInMonth(year, month);
+            int diaDaSemana = Convert.ToInt32(primeiroDiaMes.DayOfWeek.ToString("d")) + 1;
+
+            for (int i = 1; i < diaDaSemana; i++)
+            {
+                UserControlCalendario calendario = new UserControlCalendario();
+                painelCalendario.Controls.Add(calendario);
+            }
+            for (int i = 1; i <= dias; i++)
+            {
+                UserControlDias numdias = new UserControlDias();
+                numdias.Dias(i);
+                painelCalendario.Controls.Add(numdias);
+            }
+        }
+        #endregion
 
         #region Metodos de Eventos
         private void BuscarEventosDoDia()
@@ -56,6 +142,51 @@ namespace StartClinica
             dataGridViewEventosHome.Columns[3].Name = "DESCRIÇÃO";
             dataGridViewEventosHome.Columns[3].Width = 500;
         }
+
+        private void PreencherComboBoxClientes()
+        {
+            cmbClientes.Items.Clear();
+            cmbClientes.Focus();
+            var clientes = ClienteController.GetClientesAtivos();
+            foreach (var cliente in clientes)
+            {
+                cmbClientes.Items.Add(cliente.Nome);
+            }
+        }
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            CadastrarEventoEvento();
+        }
+        private void CadastrarEventoEvento()
+        {
+            try
+            {
+                Evento Evento = new Evento()
+                {
+                    ClienteId = ClienteController.GetClienteByName(cmbClientes.Text).Id,
+                    UsuarioId = UsuarioController.GetUsuario(1).Id,
+                    Data = dtpData.Value,
+                    DataEvento = DateTime.Now,
+                    Horario = cmbHorario.Text,
+                    Motivo = txtDescricao.Text,
+                };
+                EventoController.InsertEvento(Evento);
+                Mensagens.CadastroSucesso();
+                LimparDadosEventos();
+            }
+            catch (Exception ex)
+            {
+                Mensagens.ErroParametros(ex.Message, "Erro");
+            }
+        }
+        private void LimparDadosEventos()
+        {
+            txtDescricao.Text = string.Empty;
+            cmbClientes.Text = string.Empty;
+            cmbHorario.Text = string.Empty;
+            dtpData.Value = DateTime.Now;
+        }
+
         #endregion
 
         #region Metodos de Cliente
@@ -106,12 +237,13 @@ namespace StartClinica
         }
         private void agendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAgenda frm = new frmAgenda();
+            frmEvento frm = new frmEvento();
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
         }
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            MostrarDiasMes();
             GerarDataGridEventos();
             //BuscarEventosDoDia();
             BuscarTodosEventos();
@@ -133,6 +265,8 @@ namespace StartClinica
             frmCliente frm = new frmCliente();
             frm.ShowDialog();
         }
+
+
         //Fim Form Clientes
         #endregion
 
@@ -148,8 +282,13 @@ namespace StartClinica
             }
             else if (tabSelecionada == tabHome)
             {
+                MostrarDiasMes();
                 GerarDataGridEventos();
                 BuscarTodosEventos();
+            }
+            else if (tabSelecionada == tabEventos)
+            {
+                PreencherComboBoxClientes();
             }
         }
         // Fim Tab Menu Principal
