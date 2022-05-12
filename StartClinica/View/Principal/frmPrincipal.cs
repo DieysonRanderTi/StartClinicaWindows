@@ -14,6 +14,7 @@ namespace StartClinica
     public partial class frmPrincipal : MaterialForm
     {
         int month, year;
+        public static int staticMes, staticAno;
 
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
         public frmPrincipal()
@@ -36,6 +37,9 @@ namespace StartClinica
             DateTime hoje = DateTime.Now;
             month = hoje.Month;
             year = hoje.Year;
+
+            staticMes = month;
+            staticAno = year;
 
             string nomeMes = DateTimeFormatInfo.CurrentInfo.GetMonthName(month).ToUpper();
             lblMesAno.Text = nomeMes +" "+ year;
@@ -61,10 +65,10 @@ namespace StartClinica
             painelCalendario.Controls.Clear();
             month++;
 
+            staticMes = month;
+
             string nomeMes = DateTimeFormatInfo.CurrentInfo.GetMonthName(month).ToUpper();
             lblMesAno.Text = nomeMes + " " + year;
-
-            DateTime hoje = DateTime.Now;
 
             DateTime primeiroDiaMes = new DateTime(year, month, 1);
             int dias = DateTime.DaysInMonth(year, month);
@@ -82,7 +86,6 @@ namespace StartClinica
                 painelCalendario.Controls.Add(numdias);
             }
         }
-
         private void btnVoltarMes_Click(object sender, EventArgs e)
         {
             painelCalendario.Controls.Clear();
@@ -90,8 +93,7 @@ namespace StartClinica
 
             string nomeMes = DateTimeFormatInfo.CurrentInfo.GetMonthName(month).ToUpper();
             lblMesAno.Text = nomeMes + " " + year;
-
-            DateTime hoje = DateTime.Now;
+            staticMes = month;
 
             DateTime primeiroDiaMes = new DateTime(year, month, 1);
             int dias = DateTime.DaysInMonth(year, month);
@@ -109,14 +111,15 @@ namespace StartClinica
                 painelCalendario.Controls.Add(numdias);
             }
         }
+
         #endregion
 
         #region Metodos de Eventos
-        private void BuscarEventosDoDia()
-        {
-            var eventos = EventoController.GetAllEventos().Where(x => x.DataEvento.Date == DateTime.Now.Date).ToList();
-            PreencherGridEventos(eventos);
-        }
+        //private void BuscarEventosDoDia()
+        //{
+        //    var eventos = EventoController.GetAllEventos().Where(x => x.DataEvento.Date == DateTime.Now.Date).ToList();
+        //    PreencherGridEventos(eventos);
+        //}
         private void BuscarTodosEventos()
         {
             var eventos = EventoController.GetAllEventos();
@@ -127,7 +130,7 @@ namespace StartClinica
             dataGridViewEventosHome.Rows.Clear();
             foreach (var evento in eventos)
             {
-                dataGridViewEventosHome.Rows.Add(evento.Cliente.Nome, evento.Data.ToString("dd/MM/yyyy"), evento.Horario, evento.Motivo);
+                dataGridViewEventosHome.Rows.Add(evento.Cliente.Nome, evento.DataEvento, evento.Horario, evento.Descricao);
             }
         }
         private void GerarDataGridEventos()
@@ -141,50 +144,6 @@ namespace StartClinica
             dataGridViewEventosHome.Columns[2].Width = 100;
             dataGridViewEventosHome.Columns[3].Name = "DESCRIÇÃO";
             dataGridViewEventosHome.Columns[3].Width = 500;
-        }
-
-        private void PreencherComboBoxClientes()
-        {
-            cmbClientes.Items.Clear();
-            cmbClientes.Focus();
-            var clientes = ClienteController.GetClientesAtivos();
-            foreach (var cliente in clientes)
-            {
-                cmbClientes.Items.Add(cliente.Nome);
-            }
-        }
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            CadastrarEventoEvento();
-        }
-        private void CadastrarEventoEvento()
-        {
-            try
-            {
-                Evento Evento = new Evento()
-                {
-                    ClienteId = ClienteController.GetClienteByName(cmbClientes.Text).Id,
-                    UsuarioId = UsuarioController.GetUsuario(1).Id,
-                    Data = dtpData.Value,
-                    DataEvento = DateTime.Now,
-                    Horario = cmbHorario.Text,
-                    Motivo = txtDescricao.Text,
-                };
-                EventoController.InsertEvento(Evento);
-                Mensagens.CadastroSucesso();
-                LimparDadosEventos();
-            }
-            catch (Exception ex)
-            {
-                Mensagens.ErroParametros(ex.Message, "Erro");
-            }
-        }
-        private void LimparDadosEventos()
-        {
-            txtDescricao.Text = string.Empty;
-            cmbClientes.Text = string.Empty;
-            cmbHorario.Text = string.Empty;
-            dtpData.Value = DateTime.Now;
         }
 
         #endregion
@@ -255,7 +214,7 @@ namespace StartClinica
 
         private void rbEventosDeHoje_CheckedChanged(object sender, EventArgs e)
         {
-            BuscarEventosDoDia();
+            //BuscarEventosDoDia();
         }
         //Fim Form Principal
 
@@ -288,7 +247,7 @@ namespace StartClinica
             }
             else if (tabSelecionada == tabEventos)
             {
-                PreencherComboBoxClientes();
+                //frmEvento.PreencherComboBoxClientes();
             }
         }
         // Fim Tab Menu Principal

@@ -19,7 +19,6 @@ namespace StartClinica.Model
         public DateTime DataNascimento { get; set; }
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }
-        public string Foto { get; set; }
 
         //ENDEREÇO
         [MaxLength(8)]

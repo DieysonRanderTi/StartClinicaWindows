@@ -63,19 +63,6 @@ namespace StartClinica
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.dataGridViewListaClientes = new System.Windows.Forms.DataGridView();
             this.tabEventos = new System.Windows.Forms.TabPage();
-            this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
-            this.btnSalvarEvento = new MaterialSkin.Controls.MaterialButton();
-            this.txtDescricao = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.cmbHorario = new MaterialSkin.Controls.MaterialComboBox();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.dtpData = new System.Windows.Forms.DateTimePicker();
-            this.btnCadastrarClienteEvento = new MaterialSkin.Controls.MaterialButton();
-            this.cmbClientes = new MaterialSkin.Controls.MaterialComboBox();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.tabFinanceiro = new System.Windows.Forms.TabPage();
             this.tabConfiguracoes = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -87,9 +74,6 @@ namespace StartClinica
             this.tabClientes.SuspendLayout();
             this.materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaClientes)).BeginInit();
-            this.tabEventos.SuspendLayout();
-            this.materialCard4.SuspendLayout();
-            this.materialCard3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabMenuPrincipal
@@ -412,7 +396,7 @@ namespace StartClinica
             this.tabClientes.Location = new System.Drawing.Point(4, 39);
             this.tabClientes.Name = "tabClientes";
             this.tabClientes.Padding = new System.Windows.Forms.Padding(3);
-            this.tabClientes.Size = new System.Drawing.Size(1167, 538);
+            this.tabClientes.Size = new System.Drawing.Size(1167, 589);
             this.tabClientes.TabIndex = 1;
             this.tabClientes.Text = "Clientes";
             // 
@@ -517,222 +501,12 @@ namespace StartClinica
             // tabEventos
             // 
             this.tabEventos.BackColor = System.Drawing.Color.White;
-            this.tabEventos.Controls.Add(this.materialCard4);
-            this.tabEventos.Controls.Add(this.materialCard3);
             this.tabEventos.ImageKey = "add.png";
             this.tabEventos.Location = new System.Drawing.Point(4, 39);
             this.tabEventos.Name = "tabEventos";
-            this.tabEventos.Size = new System.Drawing.Size(1167, 538);
+            this.tabEventos.Size = new System.Drawing.Size(1167, 589);
             this.tabEventos.TabIndex = 2;
             this.tabEventos.Text = "Eventos";
-            // 
-            // materialCard4
-            // 
-            this.materialCard4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialCard4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard4.Controls.Add(this.materialLabel7);
-            this.materialCard4.Depth = 0;
-            this.materialCard4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard4.Location = new System.Drawing.Point(64, 25);
-            this.materialCard4.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard4.Name = "materialCard4";
-            this.materialCard4.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard4.Size = new System.Drawing.Size(1017, 47);
-            this.materialCard4.TabIndex = 6;
-            // 
-            // materialLabel7
-            // 
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel7.Location = new System.Drawing.Point(17, 14);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(156, 19);
-            this.materialLabel7.TabIndex = 0;
-            this.materialLabel7.Text = "CADASTRAR EVENTO";
-            // 
-            // materialCard3
-            // 
-            this.materialCard3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard3.Controls.Add(this.btnSalvarEvento);
-            this.materialCard3.Controls.Add(this.txtDescricao);
-            this.materialCard3.Controls.Add(this.materialLabel4);
-            this.materialCard3.Controls.Add(this.cmbHorario);
-            this.materialCard3.Controls.Add(this.materialLabel3);
-            this.materialCard3.Controls.Add(this.materialLabel5);
-            this.materialCard3.Controls.Add(this.dtpData);
-            this.materialCard3.Controls.Add(this.btnCadastrarClienteEvento);
-            this.materialCard3.Controls.Add(this.cmbClientes);
-            this.materialCard3.Controls.Add(this.materialLabel6);
-            this.materialCard3.Depth = 0;
-            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard3.Location = new System.Drawing.Point(64, 85);
-            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard3.Name = "materialCard3";
-            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard3.Size = new System.Drawing.Size(1017, 311);
-            this.materialCard3.TabIndex = 5;
-            // 
-            // btnSalvarEvento
-            // 
-            this.btnSalvarEvento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSalvarEvento.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnSalvarEvento.Depth = 0;
-            this.btnSalvarEvento.HighEmphasis = true;
-            this.btnSalvarEvento.Icon = null;
-            this.btnSalvarEvento.Location = new System.Drawing.Point(823, 243);
-            this.btnSalvarEvento.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnSalvarEvento.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSalvarEvento.Name = "btnSalvarEvento";
-            this.btnSalvarEvento.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSalvarEvento.Size = new System.Drawing.Size(177, 36);
-            this.btnSalvarEvento.TabIndex = 9;
-            this.btnSalvarEvento.Text = "CADASTRAR EVENTO +";
-            this.btnSalvarEvento.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnSalvarEvento.UseAccentColor = false;
-            this.btnSalvarEvento.UseVisualStyleBackColor = true;
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.AnimateReadOnly = false;
-            this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescricao.Depth = 0;
-            this.txtDescricao.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtDescricao.LeadingIcon = null;
-            this.txtDescricao.Location = new System.Drawing.Point(17, 184);
-            this.txtDescricao.MaxLength = 50;
-            this.txtDescricao.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtDescricao.Multiline = false;
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(983, 50);
-            this.txtDescricao.TabIndex = 8;
-            this.txtDescricao.Text = "";
-            this.txtDescricao.TrailingIcon = null;
-            // 
-            // materialLabel4
-            // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(17, 162);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(71, 19);
-            this.materialLabel4.TabIndex = 7;
-            this.materialLabel4.Text = "Descrição";
-            // 
-            // cmbHorario
-            // 
-            this.cmbHorario.AutoResize = false;
-            this.cmbHorario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cmbHorario.Depth = 0;
-            this.cmbHorario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cmbHorario.DropDownHeight = 174;
-            this.cmbHorario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbHorario.DropDownWidth = 121;
-            this.cmbHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cmbHorario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cmbHorario.FormattingEnabled = true;
-            this.cmbHorario.IntegralHeight = false;
-            this.cmbHorario.ItemHeight = 43;
-            this.cmbHorario.Location = new System.Drawing.Point(228, 110);
-            this.cmbHorario.MaxDropDownItems = 4;
-            this.cmbHorario.MouseState = MaterialSkin.MouseState.OUT;
-            this.cmbHorario.Name = "cmbHorario";
-            this.cmbHorario.Size = new System.Drawing.Size(173, 49);
-            this.cmbHorario.StartIndex = 0;
-            this.cmbHorario.TabIndex = 6;
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(228, 88);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(53, 19);
-            this.materialLabel3.TabIndex = 5;
-            this.materialLabel3.Text = "Horário";
-            // 
-            // materialLabel5
-            // 
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(17, 88);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(35, 19);
-            this.materialLabel5.TabIndex = 4;
-            this.materialLabel5.Text = "Data";
-            // 
-            // dtpData
-            // 
-            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpData.Location = new System.Drawing.Point(17, 136);
-            this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(200, 23);
-            this.dtpData.TabIndex = 3;
-            // 
-            // btnCadastrarClienteEvento
-            // 
-            this.btnCadastrarClienteEvento.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCadastrarClienteEvento.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnCadastrarClienteEvento.Depth = 0;
-            this.btnCadastrarClienteEvento.HighEmphasis = true;
-            this.btnCadastrarClienteEvento.Icon = null;
-            this.btnCadastrarClienteEvento.Location = new System.Drawing.Point(631, 49);
-            this.btnCadastrarClienteEvento.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnCadastrarClienteEvento.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCadastrarClienteEvento.Name = "btnCadastrarClienteEvento";
-            this.btnCadastrarClienteEvento.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnCadastrarClienteEvento.Size = new System.Drawing.Size(180, 36);
-            this.btnCadastrarClienteEvento.TabIndex = 2;
-            this.btnCadastrarClienteEvento.Text = "CADASTRAR CLIENTE +";
-            this.btnCadastrarClienteEvento.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnCadastrarClienteEvento.UseAccentColor = false;
-            this.btnCadastrarClienteEvento.UseVisualStyleBackColor = true;
-            // 
-            // cmbClientes
-            // 
-            this.cmbClientes.AutoResize = false;
-            this.cmbClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cmbClientes.Depth = 0;
-            this.cmbClientes.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cmbClientes.DropDownHeight = 174;
-            this.cmbClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbClientes.DropDownWidth = 121;
-            this.cmbClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cmbClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cmbClientes.FormattingEnabled = true;
-            this.cmbClientes.IntegralHeight = false;
-            this.cmbClientes.ItemHeight = 43;
-            this.cmbClientes.Location = new System.Drawing.Point(17, 36);
-            this.cmbClientes.MaxDropDownItems = 4;
-            this.cmbClientes.MouseState = MaterialSkin.MouseState.OUT;
-            this.cmbClientes.Name = "cmbClientes";
-            this.cmbClientes.Size = new System.Drawing.Size(607, 49);
-            this.cmbClientes.StartIndex = 0;
-            this.cmbClientes.TabIndex = 1;
-            // 
-            // materialLabel6
-            // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(17, 14);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(49, 19);
-            this.materialLabel6.TabIndex = 0;
-            this.materialLabel6.Text = "Cliente";
             // 
             // tabFinanceiro
             // 
@@ -740,7 +514,7 @@ namespace StartClinica
             this.tabFinanceiro.ImageKey = "cash-payment.png";
             this.tabFinanceiro.Location = new System.Drawing.Point(4, 39);
             this.tabFinanceiro.Name = "tabFinanceiro";
-            this.tabFinanceiro.Size = new System.Drawing.Size(1167, 538);
+            this.tabFinanceiro.Size = new System.Drawing.Size(1167, 589);
             this.tabFinanceiro.TabIndex = 3;
             this.tabFinanceiro.Text = "Financeiro";
             // 
@@ -750,7 +524,7 @@ namespace StartClinica
             this.tabConfiguracoes.ImageKey = "engrenagens-de-configuracoes.png";
             this.tabConfiguracoes.Location = new System.Drawing.Point(4, 39);
             this.tabConfiguracoes.Name = "tabConfiguracoes";
-            this.tabConfiguracoes.Size = new System.Drawing.Size(1167, 538);
+            this.tabConfiguracoes.Size = new System.Drawing.Size(1167, 589);
             this.tabConfiguracoes.TabIndex = 4;
             this.tabConfiguracoes.Text = "Configurações";
             // 
@@ -802,11 +576,6 @@ namespace StartClinica
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaClientes)).EndInit();
-            this.tabEventos.ResumeLayout(false);
-            this.materialCard4.ResumeLayout(false);
-            this.materialCard4.PerformLayout();
-            this.materialCard3.ResumeLayout(false);
-            this.materialCard3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -831,19 +600,6 @@ namespace StartClinica
         private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
         private MaterialSkin.Controls.MaterialButton btnCadastrarCliente;
         private MaterialSkin.Controls.MaterialTabControl tabMenuPrincipal;
-        private MaterialSkin.Controls.MaterialCard materialCard3;
-        private MaterialSkin.Controls.MaterialButton btnSalvarEvento;
-        private MaterialSkin.Controls.MaterialTextBox txtDescricao;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MaterialSkin.Controls.MaterialComboBox cmbHorario;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private System.Windows.Forms.DateTimePicker dtpData;
-        private MaterialSkin.Controls.MaterialButton btnCadastrarClienteEvento;
-        private MaterialSkin.Controls.MaterialComboBox cmbClientes;
-        private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private MaterialSkin.Controls.MaterialCard materialCard4;
-        private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private System.Windows.Forms.FlowLayoutPanel painelCalendario;
         private MaterialSkin.Controls.MaterialButton btnVoltarMes;
         private MaterialSkin.Controls.MaterialButton btnAvancarMes;

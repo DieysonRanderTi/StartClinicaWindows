@@ -12,6 +12,7 @@ namespace StartClinica.View
 {
     public partial class UserControlDias : UserControl
     {
+        public static string staticDia;
         public UserControlDias()
         {
             InitializeComponent();
@@ -24,6 +25,13 @@ namespace StartClinica.View
         public void Dias(int dia)
         {
             lblDia.Text = dia + "";
+        }
+
+        private void UserControlDias_Click(object sender, EventArgs e)
+        {
+            frmEvento frm = new frmEvento();
+            staticDia = lblDia.Text;
+            frm.ShowDialog();
         }
     }
 }

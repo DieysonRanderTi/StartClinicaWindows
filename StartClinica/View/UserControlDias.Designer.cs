@@ -47,9 +47,11 @@ namespace StartClinica.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblDia);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UserControlDias";
             this.Size = new System.Drawing.Size(97, 57);
             this.Load += new System.EventHandler(this.UserControlDias_Load);
+            this.Click += new System.EventHandler(this.UserControlDias_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
